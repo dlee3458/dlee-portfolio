@@ -6,16 +6,16 @@ from .models import Message
 from .forms import MessageForm
 
 def home(request):
-    return render(request, 'portfolio/index2.html')
+    return render(request, 'portfolio/index2.html', {'title': 'Web Developer'})
 
 def about(request):
-    return render(request, 'portfolio/about.html')
+    return render(request, 'portfolio/about.html', {'title': 'About Me'})
 
 def projects(request):
-    return render(request, 'portfolio/projects.html')
+    return render(request, 'portfolio/projects.html', {'title': 'Projects'})
 
 def skills(request):
-    return render(request, 'portfolio/skills.html')
+    return render(request, 'portfolio/skills.html', {'title': 'Skills'})
 
 def contact(request):
     if request.is_ajax() and request.method == 'POST':
@@ -30,5 +30,5 @@ def contact(request):
         return JsonResponse({'message': html})
 
     else:
-        return render(request, 'portfolio/contact.html')
+        return render(request, 'portfolio/contact.html', {'title': 'Contact Me'})
 
