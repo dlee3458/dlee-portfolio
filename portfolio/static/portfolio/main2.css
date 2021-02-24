@@ -70,6 +70,15 @@ main {
     text-shadow: -7px 0px 0px rgb(209, 80, 248);
 }
 
+#logo3 {
+    text-align: center;
+    position: relative;
+    left: 4px;
+    font-size: 20px;
+    color: rgb(90, 180, 253);
+    text-shadow: -7px 0px 0px rgb(209, 80, 248);
+}
+
 .sections {
     text-align: center;
     position: fixed;
