@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolio/main.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="navigation">
+
+        </div>
+        <div class="main">
+          <div id="sky">
+            <div class="star-container">
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+            </div>
+            <!-- <div class="star-container2">
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+            </div> -->
+            <!-- <img id="cloud" src="/media/cloudy.svg"> -->
+            <img id="moon" src="/media/moon (1).svg">
+            <!-- <img id="house" src="/media/house (2).svg">
+            <div id="house-light"></div>
+            <div id="house-light2"></div> -->
+            <!-- <img id="lighthouse" src="/media/lighthouse.svg">
+            <img id="windmill" src="/media/windmilledit.svg"> -->
+            <!-- <div id="windmill-light"></div> -->
+            <img id="tree1" src="/media/trees.svg">
+            <img id="tree2" src="/media/trees.svg">
+            <img id="tree3" src="/media/trees.svg">
+            <img id="tree4" src="/media/trees.svg">
+            <!-- <img id="tree4" src="/media/bonsai.svg">
+            <img id="owl" src="/media/owl.svg"> -->
+            <!-- <img id="wolf" src="/media/wolf.svg">
+            <img id="stone" src="/media/stonehenge.svg"> -->
+            <!-- <img id="bench" src="/media/bench.svg"> -->
+            <!-- <svg id="wave" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <linearGradient id="myGradient" gradientTransform="rotate(90)">
+                <stop offset="20%"  stop-color="#005c15" />
+                <stop offset="50%" stop-color="#014115" />
+                <stop offset="100%" stop-color="#00301c" />
+              </linearGradient>
+              <path fill="url('#myGradient')" fill-opacity="1" d="M0,32L34.3,48C68.6,64,137,96,206,117.3C274.3,139,343,149,411,138.7C480,128,549,96,617,74.7C685.7,53,754,43,823,42.7C891.4,43,960,53,1029,69.3C1097.1,85,1166,107,1234,117.3C1302.9,128,1371,128,1406,128L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+              <defs>
+              </defs>
+            </svg> -->
+            <svg id="wave" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path fill="#181d2d" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,197.3C480,203,600,213,720,218.7C840,224,960,224,1080,224C1200,224,1320,224,1380,224L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+            <svg id="wave2" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <linearGradient id="w2" gradientTransform="rotate(90)">
+                <stop offset="40%"  stop-color="#1d294d" />
+                <stop offset="100%" stop-color="#425898" />
+              </linearGradient>
+              <path fill="url('#w2')" fill-opacity="1" d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,149.3C672,160,768,160,864,133.3C960,107,1056,53,1152,32C1248,11,1344,21,1392,26.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <svg id="wave3" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <linearGradient id="w3" gradientTransform="rotate(90)">
+                <stop offset="40%"  stop-color="#223262" />
+                <stop offset="100%" stop-color="#4b66b3" />
+              </linearGradient>
+              <path fill="url('#w3')" fill-opacity="1" d="M0,224L20,218.7C40,213,80,203,120,170.7C160,139,200,85,240,58.7C280,32,320,32,360,26.7C400,21,440,11,480,21.3C520,32,560,64,600,96C640,128,680,160,720,154.7C760,149,800,107,840,90.7C880,75,920,85,960,117.3C1000,149,1040,203,1080,197.3C1120,192,1160,128,1200,122.7C1240,117,1280,171,1320,213.3C1360,256,1400,288,1420,304L1440,320L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path>
+            </svg>
+            <!-- <svg id="wave2" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path fill="#0099ff" fill-opacity="1" d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,149.3C672,160,768,160,864,133.3C960,107,1056,53,1152,32C1248,11,1344,21,1392,26.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg> -->
+          </div>
+        </div>
+    </main>
+</body>
+</html>

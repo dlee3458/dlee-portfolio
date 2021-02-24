@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolio/main2.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="navigation">
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                    <p id="logo">D</p>
+                    <p id="name">Daniel</p>
+                </a>
+            </div>
+            <div class="sections">
+                <a href="{% url 'home' %}" id="home"><span><img src="/media/hut.svg"></span></a>
+                <a href="{% url 'about' %}" id="about"><span><img src="/media/user (1).svg"></span></a>
+                <a href="{% url 'projects' %}" id="projects"><span><img src="/media/folder.svg"></span></a>
+                <a href="{% url 'skills' %}" id="skills"><span><img src="/media/skills.svg"></span></a>
+                <a href="{% url 'contact' %}" id="contact"><span><img src="/media/email.svg"></span></a>
+            </div>
+            <div class="personal-links">
+                <a href="/media/Daniel Lee (2).pdf" id="resume" target="__blank"><span><img src="/media/cv.svg"></span></a>
+                <a href="https://github.com/dlee3458" id="github" target="__blank"><span><img src="/media/github.svg"></span></a>
+                <a href="https://www.linkedin.com/in/dlee26/" id="linkedin" target="__blank"><span><img src="/media/linkedin.svg"></span></a>
+            </div>
+        </div>
+        <div class="navigation2">
+            <div class="logo2">
+                <a href="{% url 'home' %}">
+                    <p id="logo2">D</p>
+                </a>
+            </div>
+            <div class="sections2">
+                <a href="{% url 'home' %}" id="home"><span><img src="/media/hut.svg"></span></a>
+                <a href="{% url 'about' %}" id="about"><span><img src="/media/user (1).svg"></span></a>
+                <a href="{% url 'projects' %}" id="projects"><span><img src="/media/folder.svg"></span></a>
+                <a href="{% url 'skills' %}" id="skills"><span><img src="/media/skills.svg"></span></a>
+                <a href="{% url 'contact' %}" id="contact"><span><img src="/media/email.svg"></span></a>
+            </div>
+            <div class="personal-links2">
+                <a href="/media/Daniel Lee (2).pdf" id="resume2" target="__blank"><span><img src="/media/cv.svg"></span></a>
+                <a href="https://github.com/dlee3458" id="github2" target="__blank"><span><img src="/media/github.svg"></span></a>
+                <a href="https://www.linkedin.com/in/dlee26/" id="linkedin2" target="__blank"><span><img src="/media/linkedin.svg"></span></a>
+            </div>
+            <div class="hamburger">
+                <button type="button" class="hamburger-icon"><img src="/media/hamburger (2).svg"></button>
+            </div>
+            <div class="hamburger-menu">
+                <div class="sections3">
+                    <a href="{% url 'home' %}" id="home"><span><img src="/media/hut.svg"></span></a>
+                    <a href="{% url 'about' %}" id="about"><span><img src="/media/user (1).svg"></span></a>
+                    <a href="{% url 'projects' %}" id="projects"><span><img src="/media/folder.svg"></span></a>
+                    <a href="{% url 'skills' %}" id="skills"><span><img src="/media/skills.svg"></span></a>
+                    <a href="{% url 'contact' %}" id="contact"><span><img src="/media/email.svg"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+</body>
+
+<script>
+    $(document).ready(function() {
+        // Delay shooting stars
+        var animated = document.querySelector('.shooting-star');
+        var delay = 7000
+
+        animated.onanimationend = () => {
+            $(animated).css("-webkit-animation", "none");
+            $(animated).css("-moz-animation", "none");
+            $(animated).css("-ms-animation", "none");
+            $(animated).css("animation", "none");
+            $(animated).css("display", "none");
+
+            setTimeout(function() {
+                $(animated).css("display", "inline-block");
+                $(animated).css("-webkit-animation", "shooting 0.3s linear");
+                $(animated).css("-moz-animation", "shooting 0.3s linear");
+                $(animated).css("-ms-animation", "shooting 0.3s linear");
+                $(animated).css("animation", "shooting 0.3s linear");
+            }, delay);
+        };
+
+        var animated2 = document.querySelector('.shooting-star2');
+
+        animated2.onanimationend = () => {
+            $(animated2).css("-webkit-animation", "none");
+            $(animated2).css("-moz-animation", "none");
+            $(animated2).css("-ms-animation", "none");
+            $(animated2).css("animation", "none");
+            $(animated2).css("display", "none");
+
+            setTimeout(function() {
+                $(animated2).css("display", "inline-block");
+                $(animated2).css("-webkit-animation", "shooting2 0.3s linear");
+                $(animated2).css("-moz-animation", "shooting2 0.3s linear");
+                $(animated2).css("-ms-animation", "shooting2 0.3s linear");
+                $(animated2).css("animation", "shooting2 0.3s linear");
+            }, delay);
+        };
+
+        var animated3 = document.querySelector('.shooting-star3');
+
+        animated3.onanimationend = () => {
+            $(animated3).css("-webkit-animation", "none");
+            $(animated3).css("-moz-animation", "none");
+            $(animated3).css("-ms-animation", "none");
+            $(animated3).css("animation", "none");
+            $(animated3).css("display", "none");
+
+            setTimeout(function() {
+                $(animated3).css("display", "inline-block");
+                $(animated3).css("-webkit-animation", "shooting3 0.3s linear");
+                $(animated3).css("-moz-animation", "shooting3 0.3s linear");
+                $(animated3).css("-ms-animation", "shooting3 0.3s linear");
+                $(animated3).css("animation", "shooting3 0.3s linear");
+            }, delay);
+        };
+
+        var animated4 = document.querySelector('.shooting-star4');
+
+        animated4.onanimationend = () => {
+            $(animated4).css("-webkit-animation", "none");
+            $(animated4).css("-moz-animation", "none");
+            $(animated4).css("-ms-animation", "none");
+            $(animated4).css("animation", "none");
+            $(animated4).css("display", "none");
+
+            setTimeout(function() {
+                $(animated4).css("display", "inline-block");
+                $(animated4).css("-webkit-animation", "shooting4 0.3s linear");
+                $(animated4).css("-moz-animation", "shooting4 0.3s linear");
+                $(animated4).css("-ms-animation", "shooting4 0.3s linear");
+                $(animated4).css("animation", "shooting4 0.3s linear");
+            }, delay);
+        };
+
+        var animated5 = document.querySelector('.shooting-star5');
+
+        animated5.onanimationend = () => {
+            $(animated5).css("-webkit-animation", "none");
+            $(animated5).css("-moz-animation", "none");
+            $(animated5).css("-ms-animation", "none");
+            $(animated5).css("animation", "none");
+            $(animated5).css("display", "none");
+
+            setTimeout(function() {
+                $(animated5).css("display", "inline-block");
+                $(animated5).css("-webkit-animation", "shooting5 0.3s linear");
+                $(animated5).css("-moz-animation", "shooting5 0.3s linear");
+                $(animated5).css("-ms-animation", "shooting5 0.3s linear");
+                $(animated5).css("animation", "shooting5 0.3s linear");
+            }, delay);
+        };
+
+        // Hover effect for personal links
+        $("#github2").hover(
+            function(){
+                $("img", this).attr('src', '/media/github2.svg');
+            },
+            function(){
+                $("img", this).attr('src', '/media/github.svg')
+            }
+        );
+
+        $("#linkedin2").hover(
+            function(){
+                $("img", this).attr('src', '/media/linkedin2.svg');
+            },
+            function(){
+                $("img", this).attr('src', '/media/linkedin.svg')
+            }
+        );
+
+        $("#resume2").hover(
+            function(){
+                $("img", this).attr('src', '/media/cv2.svg');
+            },
+            function(){
+                $("img", this).attr('src', '/media/cv.svg');
+            }
+        );
+
+        // Change hamburger icon on hover
+        $(".hamburger-icon").hover(
+            function(){
+                $("img", this).attr('src', '/media/hamburger3.svg');
+            },
+            function(){
+                $("img", this).attr('src', '/media/hamburger (2).svg');
+            }
+        );
+
+        // Display menu when hamburger icon is clicked
+        $(".hamburger-icon").on("click", function(){
+            $(".hamburger-menu").slideToggle();
+        });
+
+        // Hide hamburger menu when window size is >= 601
+        $(window).on('resize', function(){
+            var win = $(this); //this = window
+            if (win.width() >= 601) {
+                $('.hamburger-menu').css('display', 'none');
+            }
+        });
+
+        $(document).on('click', '#submit-message', function(event) {
+            event.preventDefault;
+            $.ajax({
+                type: 'POST',
+                url: '{% url "contact" %}',
+                data: {'csrfmiddlewaretoken': '{{ csrf_token }}', 'email': $('#email').val(), 'subject': $('#subject').val(), 'body': $('#body').val()},
+                success: function(response){
+                    $('#message-form')[0].reset();
+                    $('.messages').html(response['message']);
+                    $('#alert').delay(4000).fadeOut("slow");
+                },
+            });
+        });
+
+        $('#covid-project').hover(
+            function() {
+                $('.covid-description').fadeIn();
+                $('.covid-description').css('display', 'flex');
+                $('#covid-logo').css('opacity', '0.3');
+            },
+            function() {
+                $('.covid-description').css('display', 'none');
+                $('#covid-logo').css('opacity', '1');
+            }
+        );
+
+        $('.covid-button').hover(
+            function() {
+                $('a', this).css('color', 'white');
+                $(this).css('background', 'rgb(209, 80, 248)');
+            },
+            function() {
+                $('a', this).css('color', 'rgb(209, 80, 248)');
+                $(this).css('background', 'rgb(37, 37, 37)');
+            }
+        );
+
+        $('#spacehut-project').hover(
+            function() {
+                $('.spacehut-description').fadeIn();
+                $('.spacehut-description').css('display', 'flex');
+                $('#spacehut-logo').css('opacity', '0.3');
+            },
+            function() {
+                $('.spacehut-description').css('display', 'none');
+                $('#spacehut-logo').css('opacity', '1');
+            }
+        );
+
+        $('.spacehut-button').hover(
+            function() {
+                $('a', this).css('color', 'white');
+                $(this).css('background', 'rgb(209, 80, 248)');
+            },
+            function() {
+                $('a', this).css('color', 'rgb(209, 80, 248)');
+                $(this).css('background', 'rgb(37, 37, 37)');
+            }
+        );
+    });
+</script>
+</html>

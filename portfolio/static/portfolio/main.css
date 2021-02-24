@@ -1,0 +1,408 @@
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.navigation {
+    width: 55px;
+    height: 100vh;
+    background: rgb(31, 31, 31);
+    z-index: 99;
+}
+
+.main {
+    width: calc(100% - 55px);
+    height: 100vh;
+    background: black;
+}
+
+#wave {
+    /* position: relative;
+    top: -18vw; */
+    position: fixed;
+    height: 350px;
+    width: calc(100% - 55px);
+    bottom: 0;
+    z-index: 4;
+}
+
+#wave2 {
+    position: absolute;
+    bottom: 0;
+    height: 17vw;
+    right: 0vw;
+    z-index: 3;
+}
+
+#wave3 {
+    position: fixed;
+    bottom: 0;
+    height: 20vw;
+    left: -17vw;
+    z-index: 2;
+}
+
+/* #pine-tree {
+    height: inherit;
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+} */
+
+#tree1 {
+    position: fixed;
+    left: 5vw;
+    bottom: 120px;
+    width: 300px;
+    height: 300px;
+    z-index: 5;
+}
+
+#tree2 {
+    position: fixed;
+    left: -3vw;
+    bottom: 120px;
+    width: 300px;
+    height: 300px;
+    z-index: 5;
+}
+
+#tree3 {
+    position: fixed;
+    right: -3vw;
+    bottom: 100px;
+    width: 300px;
+    height: 300px;
+    z-index: 5;
+}
+
+#tree4 {
+    position: fixed;
+    right: 6vw;
+    bottom: 90px;
+    width: 300px;
+    height: 300px;
+    z-index: 5;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+#owl {
+    position: fixed;
+    right: 13vw;
+    bottom: 230px;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+}
+
+#stone {
+    position: fixed;
+    left: 25vw;
+    bottom: 90px;
+    width: 150px;
+    height: 150px;
+    z-index: 5;
+}
+
+#wolf {
+    position: fixed;
+    left: 27vw;
+    bottom: 210px;
+    width: 70px;
+    height: 70px;
+    z-index: 5;
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(359deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+
+#moon {
+    position: fixed;
+    right: 5%;
+    top: 10%;
+    width: 15%;
+    height: auto;
+    border-radius: 50%;
+    -webkit-box-shadow: -1px 2px 32px 5px rgba(255,255,255,0.83); 
+    box-shadow: -1px 2px 32px 5px rgba(255,255,255,0.83);
+    animation: rotation 60s infinite linear;
+}
+
+#lighthouse {
+  position: fixed;
+  right: 26vw;
+  bottom: 100px;
+  width: 200px;
+  height: 200px;
+  z-index: 5;
+}
+
+#windmill {
+    position: fixed;
+    right: 26vw;
+    bottom: 185px;
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+    animation: spin 10s linear infinite;
+}
+
+#bench {
+    position: fixed;
+    left: 20vw;
+    bottom: 125px;
+    height: 50px;
+    width: 50px;
+}
+
+#house {
+    position: fixed;
+    right: 20vw;
+    bottom: 85px;
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+}
+
+@keyframes illuminate {
+    from {
+        background: rgb(206, 206, 53);
+    }
+    to {
+        transition: background 1s;
+        background: yellow;
+    }
+  }
+
+#house-light {
+    position: fixed;
+    right: calc(20vw + 40px);
+    bottom: 155px;
+    width: 30px;
+    height: 30px;
+    background: rgb(206, 206, 53);
+    -webkit-box-shadow: 1px 2px 10px 1px yellow; 
+    box-shadow: 1px 2px 10px 1px yellow;
+    animation: illuminate linear infinite;
+    z-index: 5;
+}
+
+#house-light2 {
+    position: fixed;
+    right: calc(20vw + 130px);
+    bottom: 155px;
+    width: 30px;
+    height: 30px;
+    background: rgb(206, 206, 53);
+    -webkit-box-shadow: 1px 2px 10px 1px yellow; 
+    box-shadow: 1px 2px 10px 1px yellow;
+    animation: illuminate linear infinite;
+    z-index: 5;
+}
+
+#house-light3 {
+    position: fixed;
+    left: calc(56% + 45px);
+    bottom: 180px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgb(223, 223, 0);
+    -webkit-box-shadow: 1px 2px 10px 2px yellow; 
+    box-shadow: 1px 2px 10px 2px yellow;
+}
+
+#windmill-light {
+    position: fixed;
+    left: calc(50% + 47px);
+    bottom: 170px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(223, 223, 0);
+    -webkit-box-shadow: 1px 2px 10px 4px yellow; 
+    box-shadow: 1px 2px 10px 4px yellow;
+    z-index: 5;
+}
+
+#propeller {
+    position: fixed;
+    left: 50%;
+    bottom: 160px;
+    width: 100px;
+    height: auto;
+    animation: spin 10s linear infinite;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#land {
+    background: #091217;
+    border: 1px solid red;
+    position: relative;
+    /* top: 20%; */
+}
+
+#sky {
+    height: 100vh;
+    /* background: rgb(0,68,110);
+    background: linear-gradient(0deg, rgba(0,68,110,1) 0%, rgba(9,18,23,1) 100%); */
+    background: rgb(180,122,194);
+    background: linear-gradient(0deg, rgba(180,122,194,1) 0%, rgba(0,101,214,1) 26%, rgba(0,21,89,1) 100%);
+}
+
+.star-container {
+    position: relative;
+    background: transparent;
+    width: 500px;
+    height: 500px;
+    transform: rotateZ(45deg);
+    left: 30vw;
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+}
+
+.star-container2 {
+    position: fixed;
+    background: transparent;
+    width: 500px;
+    height: 500px;
+    transform: rotateZ(45deg);
+    right: 300px;
+    top: 100px;
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+}
+
+.star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+    filter: drop-shadow(0 0 6px #699bff);
+    animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+  }
+  
+  .star::before, .star::after {
+    position: absolute;
+    content: '';
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3000ms ease-in-out infinite;
+  }
+  
+  .star::after {
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+  
+  .star:nth-child(1) {
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    animation-delay: 650ms;
+  }
+  .star:nth-child(1)::before, .star:nth-child(1)::after {
+    animation-delay: 650ms;
+  }
+  
+  .star:nth-child(2) {
+    top: calc(50% - -50px);
+    left: calc(50% - 190px);
+    animation-delay: 150ms;
+  }
+  .star:nth-child(2)::before, .star:nth-child(2)::after {
+    animation-delay: 150ms;
+  }
+  
+  .star:nth-child(3) {
+    top: calc(50% - -90px);
+    left: calc(50% - 200px);
+    animation-delay: 1600ms;
+  }
+  .star:nth-child(3)::before, .star:nth-child(3)::after {
+    animation-delay: 1600ms;
+  }
+  
+  .star:nth-child(4) {
+    top: calc(50% - 50px);
+    left: calc(50% - 250px);
+    animation-delay: 4700ms;
+  }
+  .star:nth-child(4)::before, .star:nth-child(4)::after {
+    animation-delay: 4700ms;
+  }
+  
+  .star:nth-child(5) {
+    top: calc(50% - -190px);
+    left: calc(50% - 200px);
+    animation-delay: 2100ms;
+  }
+  .star:nth-child(5)::before, .star:nth-child(5)::after {
+    animation-delay: 2100ms;
+  }
+  
+  
+  
+  
+  /* Animations */
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+    
+    30% {
+      width: 100px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 30px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(320px);
+    }
+  }
