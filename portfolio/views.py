@@ -6,7 +6,7 @@ from .models import Message
 from .forms import MessageForm
 
 def home(request):
-    return render(request, 'portfolio/index2.html', {'title': 'Web Developer'})
+    return render(request, 'portfolio/index2.html', {'title': 'Full Stack Developer'})
 
 def about(request):
     return render(request, 'portfolio/about.html', {'title': 'About Me'})
