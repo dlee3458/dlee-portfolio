@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 from .models import Message
-from .forms import MessageForm
 
 def home(request):
     return render(request, 'portfolio/index.html', {'title': 'Full Stack Developer'})
